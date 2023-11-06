@@ -1,0 +1,153 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f3f1"
+    android:id="@+id/emergencyContactFragment"
+    tools:context="ui.entertainer.EmergencyContactFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_20dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/edit_profile_profile_avatar_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avatar"
+                android:paddingVertical="@dimen/margin_12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/edit_profile_camera_icon_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/camera_icon_background"
+                android:src="@drawable/camera_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_profile_profile_avatar_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="@dimen/margin_5dp"
+                app:layout_constraintHorizontal_bias="0.394"
+                app:layout_constraintStart_toStartOf="@+id/edit_profile_profile_avatar_image"
+                app:layout_constraintTop_toTopOf="@+id/edit_profile_profile_avatar_image"
+                app:layout_constraintVertical_bias="0.734" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/edit_profile_fragment_first_name_et"
+            android:layout_width="match_parent"
+            android:hint="@string/first_name"
+            android:background="@drawable/custom_edit_text_input"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:inputType="text"
+
+            />
+        <EditText
+            android:id="@+id/edit_profile_fragment_last_name_et"
+            android:layout_width="match_parent"
+            android:hint="@string/last_name"
+            android:background="@drawable/custom_edit_text_input"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/edit_profile_fragment_phone_et"
+            android:layout_width="match_parent"
+            android:hint="Phone"
+            android:background="@drawable/custom_edit_text_input"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/edit_profile_fragment_alternate_phone_number_et"
+            android:layout_width="match_parent"
+            android:hint="Alternate Phone Number"
+            android:background="@drawable/custom_edit_text_input"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:id="@+id/edit_profile_fragment_change_password_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_password"
+            android:textSize="@dimen/text_size_16sp"
+            android:layout_marginVertical="@dimen/margin_15dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/oxblood_main"
+            />
+
+
+        <EditText
+            android:id="@+id/edit_profile_old_password_et"
+            android:layout_width="match_parent"
+            android:hint="@string/old_password"
+            android:background="@drawable/custom_edit_text_input"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:inputType="text"
+
+            />
+        <EditText
+            android:id="@+id/edit_profile_new_password_et"
+            android:layout_width="match_parent"
+            android:hint="@string/new_password"
+            android:background="@drawable/custom_edit_text_input"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:inputType="text"
+            />
+        <EditText
+            android:id="@+id/edit_profile_confirm_password__et"
+            android:layout_width="match_parent"
+            android:hint="@string/confirm_password"
+            android:background="@drawable/custom_edit_text_input"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            android:inputType="text"
+            tools:ignore="TextFields" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_profile"
+            style="@style/onBoarding_oxblood_button"
+            android:paddingVertical="@dimen/margin_10dp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginVertical="@dimen/margin_50dp"
+            />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

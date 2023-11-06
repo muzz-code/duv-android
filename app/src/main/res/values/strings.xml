@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Duv Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="duv">DUV</string>
+    <string name="live">LIVE</string>
+    <string name="sing_up">sing up</string>
+    <string name="login">login</string>
+    <string name="login_cap">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="skip">Skip</string>
+    <string name="find_an_event">Find an event?</string>
+    <string name="duv_live_is_the_perfect_place_where_you_can_attend_nice_events">DUV-live is the perfect place where you can attend nice events</string>
+    <string name="next">next</string>
+    <string name="sign_up_real">sign up</string>
+    <string name="have_an_account_login">Have an account? Login</string>
+    <string name="let_s_get_to_know_you">let\'s get to know you</string>
+    <string name="email_cannot_be_empty">Email can not be empty</string>
+    <string name="password_does_not_match">Password does not match</string>
+    <string name="confirm_password_cannot_be_empty">Confirm password cannot be empty</string>
+    <string name="pasword_cannot_be_empty">Password cannot be empty</string>
+    <string name="phone_number_cannot_be_empty">Phone number cannot be empty</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="minimum_of_5_xter">Minimum of 5 characters</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="entertainer_profile">Entertainer Profile</string>
+    <string name="youtube_channel">Youtube Channel</string>
+    <string name="valid_identification">Valid Identification</string>
+    <string name="switch_user">Switch User</string>
+    <string name="switch_to_user_account">Switch to User Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="relationship">Relationship</string>
+    <string name="professional_contact">Professional contact</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="update_profile">Update profile</string>
+    <string name="hello_john">Hello, John</string>
+    <string name="emergency_contact">Emergency Contact</string>
+    <string name="bank_account_details">Bank Account Details</string>
+    <string name="continue_setup">Continue SetUp</string>
+    <string name="title_activity_user_account">UserAccountActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="you_have_no_upcoming_events">You have no Upcoming Events</string>
+    <string name="no_request_found_nyou_can_create_a_new_nrequest_after_adding_a_nnew_event">No Request Found.\nYou can create a new \nRequest after adding a \nnew Event</string>
+
+    <string-array name="recommendation_array">
+        <item>Select Relationship</item>
+        <item>Entertainer</item>
+    </string-array>
+</resources>

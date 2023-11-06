@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools= "http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:title="@string/dashboard"
+        android:icon="@drawable/dashboard"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/entertainerProfileFragment"
+        android:title="@string/entertainer_profile"
+        android:icon="@drawable/avatar"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/nav_bank_account_details"
+        android:title="Bank Account Details"
+        android:icon="@drawable/bank_account_details"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/emergencyContactFragment"
+        android:title="Emergency Contact"
+        android:icon="@drawable/emergency_contact"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/nav_youtube_channel"
+        android:title="@string/youtube_channel"
+        android:icon="@drawable/youtube_icon"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/nav_valid_identification"
+        android:title="@string/valid_identification"
+        android:icon="@drawable/identification_card"
+        android:background="@color/oxblood_main"
+        />
+    </group>
+
+<item android:title="OTHERS">
+
+
+
+    <menu>
+        <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_switch_user"
+            android:title="@string/switch_to_user_account"
+            android:icon="@drawable/swtich_user"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/editProfileFragment"
+            android:title="@string/edit_profile"
+            android:icon="@drawable/avatar"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/nav_invite_friends"
+            android:title="@string/invite_friends"
+            android:icon="@drawable/invite_friends"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout"
+            android:icon="@drawable/logout"
+            android:background="@color/oxblood_main"
+            />
+        </group>
+    </menu>
+
+</item>
+
+</menu>

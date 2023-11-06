@@ -1,0 +1,92 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/oxblood_main"
+    android:padding="@dimen/margin_15dp"
+    tools:context="ui.LoginSignUpOptionsFragment">
+
+    <ImageView
+        android:id="@+id/login_fragment_duv_logo_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/duv_red_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <TextView
+        android:id="@+id/login_sign_up_fragment_duv_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:text="@string/duv"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintStart_toStartOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/login_fragment_duv_logo_image_view" />
+
+    <TextView
+        android:id="@+id/login_sign_up_fragment_live_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:text="@string/live"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_sign_up_fragment_duv_text_view"
+        app:layout_constraintStart_toStartOf="@+id/login_sign_up_fragment_duv_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/login_sign_up_fragment_duv_text_view" />
+
+
+    <Button
+        android:id="@+id/login_sign_up_options_fragment_sign_up_button"
+        style="@style/white_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_login_sign_up_fragment_sign_up_button"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/sign_up_real"
+        android:textColor="@color/oxblood_main"
+        app:layout_constraintEnd_toEndOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <Button
+        android:id="@+id/login_sign_up_options_fragment_login_button"
+        style="@style/sign_up_option_oxblood_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@+id/login_sign_up_options_fragment_sign_up_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_sign_up_options_fragment_sign_up_button"
+        app:layout_constraintTop_toBottomOf="@+id/login_sign_up_options_fragment_sign_up_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

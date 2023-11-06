@@ -1,0 +1,69 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.client.OnBoardingActivity"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/margin_40dp"
+        android:padding="@dimen/margin_20dp">
+
+        <TextView
+            android:id="@+id/find_event_fragment_skip_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/skip"
+            android:textColor="@color/bold_gray"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/find_event_fragment_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_11dp"
+            android:src="@drawable/date_picker_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/find_event_fragment_skip_text_view" />
+
+        <TextView
+            android:id="@+id/find_event_fragment_find_an_event_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_50dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/find_an_event"
+            android:textColor="@color/oxblood_main"
+            android:textSize="@dimen/text_size_24sp"
+            app:layout_constraintEnd_toEndOf="@+id/find_event_fragment_image"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="@+id/find_event_fragment_image"
+            app:layout_constraintTop_toBottomOf="@+id/find_event_fragment_image" />
+
+        <TextView
+            android:id="@+id/find_event_fragment_dummy_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:fontFamily="@font/poppins"
+            android:text="one"
+            android:textColor="@color/oxblood_main"
+            app:layout_constraintEnd_toEndOf="@+id/find_event_fragment_image"
+            app:layout_constraintStart_toStartOf="@+id/find_event_fragment_image"
+            app:layout_constraintTop_toBottomOf="@+id/find_event_fragment_find_an_event_text_view" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

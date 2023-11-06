@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/my_background_gray"
+    android:layout_height="match_parent"
+    android:id="@+id/entertainer_dashboard_entertainer_profile_fragment"
+    tools:context="ui.entertainer.EntertainerProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_20dp">
+
+        <TextView
+            android:id="@+id/entertainer_profile_dashboard_h1_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_8dp"
+            android:textSize="@dimen/margin_16dp"
+            android:gravity="center"
+            android:text="You are just a few steps away from activating your account"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/oxblood_main"
+            />
+        <TextView
+            android:id="@+id/entertainer_profile_fragment_h2_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow the 5 steps below to complete your account whenever you are ready .\nOnce completed your account would be approved within 24 hours"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:lineHeight="@dimen/margin_18dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:textColor="@color/oxblood_main"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_entertainer_profile_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_right"
+            android:hint="@string/entertainer_profile"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_dashboard_bank_details_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableEnd="@drawable/arrow_right"
+            android:hint="@string/bank_account_details"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_dashboard_emergency_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_right"
+            android:hint="@string/emergency_contact"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/emergency_contact_fragment_youtube_channel_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_right"
+            android:hint="@string/youtube_channel"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/emergency_contact_fragment_valid_id_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_right"
+            android:hint="@string/valid_identification"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+
+        <Button
+            android:id="@+id/entertainer_dashboard_continue_btn"
+            style="@style/onBoarding_oxblood_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_50dp"
+            android:fontFamily="@font/poppins"
+            android:paddingVertical="@dimen/margin_10dp"
+            android:text="@string/continue_setup" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

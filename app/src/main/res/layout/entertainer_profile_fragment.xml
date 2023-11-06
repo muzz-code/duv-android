@@ -1,0 +1,181 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f4f3f1"
+    android:layout_height="match_parent"
+    android:id="@+id/entertainer_dashboard_entertainer_profile_fragment"
+    tools:context="ui.entertainer.EntertainerProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_20dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/edit_profile_profile_avatar_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avatar"
+        android:paddingVertical="@dimen/margin_12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/edit_profile_camera_icon_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/camera_icon_background"
+        android:src="@drawable/camera_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_profile_profile_avatar_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/margin_5dp"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="@+id/edit_profile_profile_avatar_image"
+        app:layout_constraintTop_toTopOf="@+id/edit_profile_profile_avatar_image"
+        app:layout_constraintVertical_bias="0.734" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_pro_stage_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:hint="Stage Name"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+
+            />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_entertainer_type_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_down"
+            android:hint="Entertainer Type"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_select_location_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_down"
+            android:hint="Selection Location"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_select_city_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_down"
+            android:hint="Select LGA/City"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/emergency_contact_fragment_choose_base_charges_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_down"
+            android:hint="Choose Your Base Charges"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_choose_your_highest_charges_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_down"
+            android:hint="Choose your Highest Charges"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_Travel_to_other_states_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_down"
+            android:hint="Travel to other States for shows"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_year_you_started_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:drawableRight="@drawable/arrow_down"
+            android:hint="Year you Started"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_available_for_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:hint="Available for"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/entertainer_profile_fragment_event_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_15dp"
+            android:background="@drawable/custom_edit_text_input"
+            android:hint="Event"
+            android:inputType="text"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <Button
+            style="@style/onBoarding_oxblood_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_50dp"
+            android:fontFamily="@font/poppins"
+            android:paddingVertical="@dimen/margin_10dp"
+            android:text="Update Contact" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

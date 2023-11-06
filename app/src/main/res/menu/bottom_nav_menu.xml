@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/bottom_nav_home_icon"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/bottom_nav_event_icon"
+            android:title="Event" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/bottom_nav_settings_icon"
+            android:title="Settings" />
+
+</menu>

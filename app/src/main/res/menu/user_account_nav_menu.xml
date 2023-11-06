@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools= "http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:title="@string/dashboard"
+        android:icon="@drawable/dashboard"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/auctionsFragment"
+        android:title="Auctions"
+        android:icon="@drawable/ic_auction"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/requestsFragment"
+        android:title="Requests"
+        android:icon="@drawable/ic_request"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/myEventsFragment"
+        android:title="My Events"
+        android:icon="@drawable/ic_payment"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/notificationsFragment"
+        android:title="Notifications"
+        android:icon="@drawable/ic_notification"
+        android:background="@color/oxblood_main"
+        />
+
+    <item
+        android:id="@+id/hireEntertainersFragment"
+        android:title="Hire Entertainers"
+        android:icon="@drawable/identification_card"
+        android:background="@color/oxblood_main"
+        />
+        <item
+            android:id="@+id/paymentsHistory"
+            android:title="Payments History"
+            android:icon="@drawable/ic_payment"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/leaveAReview"
+            android:title="Leave a review"
+            android:icon="@drawable/ic_review"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/publicEvents"
+            android:title="Public Events"
+            android:icon="@drawable/ic_payment"
+            android:background="@color/oxblood_main"
+            />
+
+    </group>
+
+<item android:title="OTHERS">
+
+
+
+    <menu>
+        <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_switch_user"
+            android:title="Switch to Entertainer Account"
+            android:icon="@drawable/swtich_user"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/editProfileFragment"
+            android:title="@string/edit_profile"
+            android:icon="@drawable/avatar"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/nav_invite_friends"
+            android:title="@string/invite_friends"
+            android:icon="@drawable/invite_friends"
+            android:background="@color/oxblood_main"
+            />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/logout"
+            android:icon="@drawable/logout"
+            android:background="@color/oxblood_main"
+            />
+        </group>
+    </menu>
+
+</item>
+
+</menu>
