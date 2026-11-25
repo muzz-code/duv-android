@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginSignUpOptionsFragment"
-        android:name="ui.LoginSignUpOptionsFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.auth.LoginSignUpOptionsFragment"
         android:label="login_sign_up_options_fragment"
         tools:layout="@layout/login_sign_up_options_fragment" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ui.LoginFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.auth.login.LoginFragment"
         android:label="login_fragment"
         tools:layout="@layout/login_fragment" >
         <action
@@ -32,12 +32,12 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="ui.SignUpFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.auth.signup.SignUpFragment"
         android:label="sign_up_fragment"
         tools:layout="@layout/sign_up_fragment" />
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="ui.ForgotPasswordFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.auth.forgotpassword.ForgotPasswordFragment"
         android:label="forgot_password_fragment"
         tools:layout="@layout/forgot_password_fragment" />
 </navigation>

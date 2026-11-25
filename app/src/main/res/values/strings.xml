@@ -70,4 +70,5 @@
         <item>Select Relationship</item>
         <item>Entertainer</item>
     </string-array>
+    <string name="good_to_go">Good to go</string>
 </resources>

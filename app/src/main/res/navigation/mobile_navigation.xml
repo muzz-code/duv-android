@@ -7,34 +7,34 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="ui.user.home.HomeFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.user.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="ui.user.dashboard.DashboardFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.user.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="ui.user.notifications.NotificationsFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.user.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/auctionsFragment2"
-        android:name="ui.user.AuctionsFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.user.auctions.AuctionsFragment"
         android:label="Auctions"
         tools:layout="@layout/fragment_auctions" />
     <fragment
         android:id="@+id/requestsFragment"
-        android:name="ui.user.RequestsFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.user.requests.RequestsFragment"
         android:label="Request"
         tools:layout="@layout/fragment_requests"/>
     <fragment
         android:id="@+id/myEventsFragment"
-        android:name="ui.user.MyEventsFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.user.myevents.MyEventsFragment"
         android:label="My Events"
         tools:layout="@layout/fragment_my_events"/>
 </navigation>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#f4f3f1"
     android:id="@+id/emergencyContactFragment"
-    tools:context="ui.entertainer.EmergencyContactFragment">
+    tools:context="com.ebookfrenzy.duvproject.ui.entertainer.EmergencyContactFragment">
 
   <LinearLayout
       android:layout_width="match_parent"

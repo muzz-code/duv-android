@@ -12,7 +12,7 @@
     android:layout_height="match_parent"
     android:background="@color/oxblood_main"
     android:padding="@dimen/margin_15dp"
-    tools:context="ui.LoginSignUpOptionsFragment">
+    tools:context="com.ebookfrenzy.duvproject.ui.auth.LoginSignUpOptionsFragment">
 
     <ImageView
         android:id="@+id/login_fragment_duv_logo_image_view"

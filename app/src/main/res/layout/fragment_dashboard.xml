@@ -6,7 +6,7 @@
     android:background="@color/my_background_gray"
     android:layout_height="match_parent"
     android:id="@+id/entertainer_dashboard_entertainer_profile_fragment"
-    tools:context="ui.entertainer.EntertainerProfileFragment">
+    tools:context="com.ebookfrenzy.duvproject.ui.entertainer.EntertainerProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

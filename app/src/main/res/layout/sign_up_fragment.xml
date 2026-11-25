@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context="ui.SignUpFragment"
+    tools:context="com.ebookfrenzy.duvproject.ui.auth.signup.SignUpFragment"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
