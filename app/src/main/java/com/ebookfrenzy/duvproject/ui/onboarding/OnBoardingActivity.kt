@@ -8,6 +8,7 @@ import com.ebookfrenzy.duvproject.R
 import com.ebookfrenzy.duvproject.databinding.OnBoardingActivityBinding
 import com.ebookfrenzy.duvproject.ui.auth.AuthenticationActivity
 import com.ebookfrenzy.duvproject.ui.common.collectWhenStarted
+import com.ebookfrenzy.duvproject.ui.common.setStatusBar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,6 +24,7 @@ class OnBoardingActivity : AppCompatActivity() {
         binding = OnBoardingActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        setStatusBar(R.color.duv_background, darkIcons = true)
 
         binding.screenPager.adapter = pagerAdapter
         binding.onBoardingActivityTabLayout.setupWithViewPager(binding.screenPager, true)

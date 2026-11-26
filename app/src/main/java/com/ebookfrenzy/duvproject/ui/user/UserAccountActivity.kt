@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -17,13 +18,20 @@ import com.ebookfrenzy.duvproject.R
 import com.ebookfrenzy.duvproject.databinding.ActivityUserAccountBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import com.ebookfrenzy.duvproject.ui.common.LoadingOverlay
+import com.ebookfrenzy.duvproject.ui.common.LogoutViewModel
+import com.ebookfrenzy.duvproject.ui.common.collectWhenStarted
+import com.ebookfrenzy.duvproject.ui.common.openLogin
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class UserAccountActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserAccountBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var listener: NavController.OnDestinationChangedListener
+    private val logoutViewModel: LogoutViewModel by viewModels()
+    private val loader by lazy { LoadingOverlay(this) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,9 +105,22 @@ class UserAccountActivity : AppCompatActivity() {
                     drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
+                R.id.nav_logout -> {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    logoutViewModel.onLogoutClicked()
+                    return@setNavigationItemSelectedListener true
+                }
                 else -> return@setNavigationItemSelectedListener true
             }
         }
+
+        collectWhenStarted(logoutViewModel.isLoading) { loader.setLoading(it) }
+        collectWhenStarted(logoutViewModel.loggedOut) { openLogin() }
+    }
+
+    override fun onDestroy() {
+        loader.hide()
+        super.onDestroy()
     }
 
     override fun onSupportNavigateUp(): Boolean {

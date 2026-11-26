@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- Logo comes from the window background (@drawable/splash_image) so it shows instantly.
+     Design: Figma "DUV Live" → 02 · Improved → Splash -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.ebookfrenzy.duvproject.ui.splash.SplashScreenActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+    <TextView
+        style="@style/Duv.Text.Display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="DUV LIVE"
+        android:textColor="@color/duv_on_primary"
+        android:textSize="26sp" />
+
+    <TextView
+        style="@style/Duv.Text.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book the vibe."
+        android:textColor="@color/duv_on_dark_muted" />
+
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+</LinearLayout>

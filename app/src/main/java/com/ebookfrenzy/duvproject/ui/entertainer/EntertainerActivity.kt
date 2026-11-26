@@ -1,5 +1,10 @@
 package com.ebookfrenzy.duvproject.ui.entertainer
 
+import com.ebookfrenzy.duvproject.ui.common.LoadingOverlay
+import com.ebookfrenzy.duvproject.ui.common.LogoutViewModel
+import com.ebookfrenzy.duvproject.ui.common.collectWhenStarted
+import com.ebookfrenzy.duvproject.ui.common.openLogin
+import com.ebookfrenzy.duvproject.ui.common.setStatusBar
 import com.ebookfrenzy.duvproject.ui.user.UserAccountActivity
 
 import android.app.Dialog
@@ -10,6 +15,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -21,11 +27,15 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.ebookfrenzy.duvproject.R
 import com.ebookfrenzy.duvproject.databinding.ActivityUserBinding
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class EntertainerActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityUserBinding
+    private val logoutViewModel: LogoutViewModel by viewModels()
+    private val loader by lazy { LoadingOverlay(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,6 +90,11 @@ class EntertainerActivity : AppCompatActivity() {
                     Toast.makeText(this, "youtube Channel", Toast.LENGTH_SHORT).show()
                     return@setNavigationItemSelectedListener true
                 }
+                R.id.nav_logout -> {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    logoutViewModel.onLogoutClicked()
+                    return@setNavigationItemSelectedListener true
+                }
                 R.id.nav_switch_user -> {
                     val intent = Intent(this, UserAccountActivity::class.java)
                     startActivity(intent)
@@ -102,6 +117,14 @@ class EntertainerActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
 //        navView.setupWithNavController(navController)
+
+        collectWhenStarted(logoutViewModel.isLoading) { loader.setLoading(it) }
+        collectWhenStarted(logoutViewModel.loggedOut) { openLogin() }
+    }
+
+    override fun onDestroy() {
+        loader.hide()
+        super.onDestroy()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -111,7 +134,7 @@ class EntertainerActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        this.window.statusBarColor = resources.getColor(R.color.status_bar_oxblood)
+        setStatusBar(R.color.white, darkIcons = true)
     }
 
     private fun showDialog() {

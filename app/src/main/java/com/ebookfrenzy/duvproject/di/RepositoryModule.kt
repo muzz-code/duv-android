@@ -1,6 +1,8 @@
 package com.ebookfrenzy.duvproject.di
 
+import com.ebookfrenzy.duvproject.data.repository.AuthRepository
 import com.ebookfrenzy.duvproject.data.repository.LocalOnBoardingRepository
+import com.ebookfrenzy.duvproject.data.repository.NetworkAuthRepository
 import com.ebookfrenzy.duvproject.data.repository.OnBoardingRepository
 import dagger.Binds
 import dagger.Module
@@ -16,4 +18,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindOnBoardingRepository(impl: LocalOnBoardingRepository): OnBoardingRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindAuthRepository(impl: NetworkAuthRepository): AuthRepository
 }

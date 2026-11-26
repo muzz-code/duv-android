@@ -14,12 +14,13 @@ import android.widget.TextView
 
 /**
  * Shows [fullText] with the part from [clickableStart] to the end styled bold/white/larger and
- * clickable. Shared by the login and sign-up screens (it used to be copy-pasted in both).
+ * clickable. [linkColor] defaults to white for dark backgrounds. Shared by the login and sign-up screens (it used to be copy-pasted in both).
  */
 fun TextView.setStyledLinkText(
     fullText: String,
     styleStart: Int,
     clickableStart: Int,
+    linkColor: Int = Color.WHITE,
     onClick: () -> Unit,
 ) {
     val end = fullText.length
@@ -33,7 +34,7 @@ fun TextView.setStyledLinkText(
     }
     text = SpannableString(fullText).apply {
         setSpan(clickableSpan, clickableStart, end, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
-        setSpan(ForegroundColorSpan(Color.WHITE), styleStart, end, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
+        setSpan(ForegroundColorSpan(linkColor), styleStart, end, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
         setSpan(RelativeSizeSpan(1.1f), styleStart, end, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
         setSpan(StyleSpan(Typeface.BOLD), styleStart, end, Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
     }
