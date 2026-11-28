@@ -37,31 +37,132 @@
             android:textSize="@dimen/setup_text_body"
             app:lineHeight="@dimen/setup_line_body" />
 
-        <TextView
+        <!-- Progress card (Figma "Account set-up progress"): status, "x of 5 steps done", bar and what's next.
+             Hidden until the profile has loaded. -->
+        <LinearLayout
+            android:id="@+id/setup_progress_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/setup_card_gap"
+            android:background="@drawable/bg_setup_card"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/setup_card_padding"
+            android:paddingTop="@dimen/setup_card_padding_top"
+            android:paddingEnd="@dimen/setup_card_padding"
+            android:paddingBottom="@dimen/setup_card_padding_bottom"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/setup_progress_label"
+                    android:textColor="@color/setup_heading"
+                    android:textSize="@dimen/setup_text_card_label" />
+
+                <TextView
+                    android:id="@+id/setup_progress_stage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/setup_chip_height"
+                    android:background="@drawable/bg_setup_chip"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/setup_chip_padding"
+                    android:paddingEnd="@dimen/setup_chip_padding"
+                    android:textSize="@dimen/setup_text_chip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setup_card_line_gap"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setup_progress_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.0167"
+                    android:textColor="@color/setup_title"
+                    android:textSize="@dimen/setup_text_card_count" />
+
+                <TextView
+                    android:id="@+id/setup_progress_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/setup_heading"
+                    android:textSize="@dimen/setup_text_card_label" />
+            </LinearLayout>
+
+            <!-- One segment per step; the fragment colours the first "done" segments. -->
+            <LinearLayout
+                android:id="@+id/setup_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setup_bar_height"
+                android:layout_marginTop="@dimen/setup_bar_top"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal">
+
+                <View style="@style/Setup.ProgressSegment" />
+
+                <View style="@style/Setup.ProgressSegment.Gap" />
+
+                <View style="@style/Setup.ProgressSegment.Gap" />
+
+                <View style="@style/Setup.ProgressSegment.Gap" />
+
+                <View style="@style/Setup.ProgressSegment.Gap" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/setup_progress_helper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setup_card_helper_gap"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="3sp"
+                android:textColor="@color/setup_progress_muted"
+                android:textSize="@dimen/setup_text_body" />
+        </LinearLayout>
+
+        <include
             android:id="@+id/setup_step_profile"
-            style="@style/Setup.StepRow"
-            android:layout_marginTop="@dimen/setup_steps_gap"
-            android:text="@string/entertainer_profile" />
+            layout="@layout/setup_step_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setup_field_height"
+            android:layout_marginTop="@dimen/setup_steps_gap" />
 
-        <TextView
+        <include
             android:id="@+id/setup_step_bank"
-            style="@style/Setup.StepRow"
-            android:text="@string/bank_account_details" />
+            layout="@layout/setup_step_row" />
 
-        <TextView
+        <include
             android:id="@+id/setup_step_emergency"
-            style="@style/Setup.StepRow"
-            android:text="@string/emergency_contact" />
+            layout="@layout/setup_step_row" />
 
-        <TextView
+        <include
             android:id="@+id/setup_step_youtube"
-            style="@style/Setup.StepRow"
-            android:text="@string/youtube_channel" />
+            layout="@layout/setup_step_row" />
 
-        <TextView
+        <include
             android:id="@+id/setup_step_identification"
-            style="@style/Setup.StepRow"
-            android:text="@string/valid_identification" />
+            layout="@layout/setup_step_row" />
 
         <Button
             android:id="@+id/setup_continue"

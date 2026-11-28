@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One dashboard step: status icon (tick, or the step number), name, "Done"/"Next", chevron.
+     Figma "Account set-up progress (proposal)". -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/setup_field_height"
+    android:layout_marginTop="@dimen/setup_field_gap"
+    android:background="@drawable/bg_setup_field"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/setup_step_icon_start"
+    android:paddingEnd="@dimen/setup_chevron_end">
+
+    <FrameLayout
+        android:layout_width="@dimen/setup_step_icon"
+        android:layout_height="@dimen/setup_step_icon"
+        android:importantForAccessibility="no">
+
+        <ImageView
+            android:id="@+id/step_done_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_setup_step_done"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/step_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_setup_step_number"
+            android:backgroundTint="@color/setup_field_border"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/setup_progress_muted"
+            android:textSize="@dimen/setup_text_step_number" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/step_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/setup_step_text_start"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="1"
+        android:textColor="@color/setup_field_text"
+        android:textSize="@dimen/setup_text_field" />
+
+    <TextView
+        android:id="@+id/step_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/setup_step_status_end"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/setup_text_chip"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_setup_chevron_right" />
+</LinearLayout>

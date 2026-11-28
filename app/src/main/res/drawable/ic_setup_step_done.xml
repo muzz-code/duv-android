@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Green circle with a white tick: a finished set-up step. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/setup_step_icon"
+    android:height="@dimen/setup_step_icon"
+    android:viewportWidth="18"
+    android:viewportHeight="18">
+    <path
+        android:fillColor="@color/setup_status_ok"
+        android:pathData="M9,0a9,9 0,1 0,0.001 0Z" />
+    <path
+        android:strokeColor="@android:color/white"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M4.6,9.2L7.6,12.2L13.4,5.8" />
+</vector>

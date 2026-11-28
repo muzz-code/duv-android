@@ -202,17 +202,15 @@ data class ContactForm(
 class EmergencyContactViewModel @Inject constructor(repository: EntertainerSetupRepository) :
     SetupStepViewModel(repository) {
 
-    /** Next of kin is required; the professional contact is optional but, once started, must be complete. */
+    /** Both a next of kin and a professional contact are required; only their emails are optional. */
     fun saveContacts(nextOfKin: ContactForm, professional: ContactForm) {
         val kin = nextOfKin.toDto()
         if (!valid(kin)) return
-        val pro = if (professional.isBlank) null else professional.toDto()
-        if (pro != null) {
-            if (listOf(pro.firstName, pro.lastName, pro.phone, pro.relationship).any { it.isBlank() }) {
-                return reject(R.string.setup_error_professional_incomplete)
-            }
-            if (!valid(pro)) return
+        val pro = professional.toDto()
+        if (listOf(pro.firstName, pro.lastName, pro.phone, pro.relationship).any { it.isBlank() }) {
+            return reject(R.string.setup_error_professional_incomplete)
         }
+        if (!valid(pro)) return
         save(R.string.setup_saved_contacts) { repository.saveEmergencyContacts(kin, pro) }
     }
 

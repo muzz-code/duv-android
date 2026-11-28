@@ -36,6 +36,19 @@
         <item name="android:drawableEnd">@null</item>
     </style>
 
+    <!-- Progress bar segment on the set-up progress card (5 share the width). -->
+    <style name="Setup.ProgressSegment" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_setup_bar</item>
+        <item name="android:backgroundTint">@color/setup_progress_track</item>
+    </style>
+
+    <style name="Setup.ProgressSegment.Gap">
+        <item name="android:layout_marginStart">@dimen/setup_bar_gap</item>
+    </style>
+
     <!-- Dashboard step row. -->
     <style name="Setup.StepRow" parent="">
         <item name="android:layout_width">match_parent</item>
