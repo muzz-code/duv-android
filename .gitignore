@@ -1,0 +1,24 @@
+# Gradle and build output
+.gradle/
+build/
+/captures
+.externalNativeBuild
+.cxx
+
+# Machine-specific: SDK path. Android Studio recreates it.
+local.properties
+
+# IDE state that differs per machine
+*.iml
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/deploymentTargetDropDown.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/deviceManager.xml
+/.idea/androidTestResultsUserPreferences.xml
+
+.DS_Store
