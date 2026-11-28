@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ebookfrenzy.duvproject.R
-import com.ebookfrenzy.duvproject.ui.common.setStatusBar
 import com.ebookfrenzy.duvproject.databinding.LoginSignUpOptionsFragmentBinding
 
 class LoginSignUpOptionsFragment : Fragment() {
@@ -48,7 +47,7 @@ class LoginSignUpOptionsFragment : Fragment() {
     }
     override fun onResume() {
         super.onResume()
-        requireActivity().setStatusBar(R.color.duv_primary_dark, darkIcons = false)
+        requireActivity().window.statusBarColor = resources.getColor(R.color.oxblood_main)
     }
 
     override fun onDestroyView() {

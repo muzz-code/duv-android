@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Entertainer account set-up screens and navigation drawers. Sizes, colours and text live in
+     dimens_setup.xml, dimens_drawer.xml, colors_setup.xml and strings_*.xml. -->
+<resources>
+
+    <!-- ===== Set-up ===== -->
+
+    <!-- Input box: full width between the page margins, hint black 50%, text black 80%. -->
+    <style name="Setup.Field" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setup_field_height</item>
+        <item name="android:layout_marginTop">@dimen/setup_field_gap</item>
+        <item name="android:background">@drawable/bg_setup_field</item>
+        <item name="android:paddingStart">@dimen/setup_field_padding</item>
+        <item name="android:paddingEnd">@dimen/setup_field_padding</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/setup_text_field</item>
+        <item name="android:textColor">@color/setup_field_text</item>
+        <item name="android:textColorHint">@color/setup_field_hint</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:importantForAutofill">no</item>
+    </style>
+
+    <!-- Same box, opens a list instead of the keyboard; chevron at the right. -->
+    <style name="Setup.Field.Dropdown">
+        <item name="android:focusable">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:inputType">none</item>
+        <item name="android:drawableEnd">@drawable/ic_setup_chevron_down</item>
+    </style>
+
+    <!-- Opens a list/date picker but, like Figma's "Available for" and date boxes, shows no chevron. -->
+    <style name="Setup.Field.Picker" parent="Setup.Field.Dropdown">
+        <item name="android:drawableEnd">@null</item>
+    </style>
+
+    <!-- Dashboard step row. -->
+    <style name="Setup.StepRow" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setup_field_height</item>
+        <item name="android:layout_marginTop">@dimen/setup_field_gap</item>
+        <item name="android:background">@drawable/bg_setup_field</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:paddingStart">@dimen/setup_field_padding</item>
+        <item name="android:paddingEnd">@dimen/setup_chevron_end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/setup_text_field</item>
+        <item name="android:textColor">@color/setup_field_text</item>
+        <item name="android:drawableEnd">@drawable/ic_setup_chevron_right</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- Screen/card title: Poppins 600, 10% letter spacing. -->
+    <style name="Setup.Title" parent="">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/setup_text_title</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/setup_title</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Section heading ("Next of Kin"). -->
+    <style name="Setup.Heading" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/setup_text_title</item>
+        <item name="android:letterSpacing">-0.01875</item>
+        <item name="android:textColor">@color/setup_heading</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="lineHeight">@dimen/setup_line_heading</item>
+    </style>
+
+    <!-- Primary button. -->
+    <style name="Setup.Button" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setup_button_height</item>
+        <item name="android:background">@drawable/bg_setup_button</item>
+        <item name="android:textColor">@color/setup_surface</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/setup_text_button</item>
+        <item name="android:letterSpacing">-0.01875</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:elevation">@dimen/setup_button_elevation</item>
+    </style>
+
+    <!-- Card "BACK" text button. -->
+    <style name="Setup.DialogBack" parent="">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/setup_text_small_button</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/setup_dialog_back</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:text">@string/setup_back</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:paddingStart">@dimen/setup_dialog_back_padding_h</item>
+        <item name="android:paddingEnd">@dimen/setup_dialog_back_padding_h</item>
+        <item name="android:paddingTop">@dimen/setup_dialog_back_padding_v</item>
+        <item name="android:paddingBottom">@dimen/setup_dialog_back_padding_v</item>
+    </style>
+
+    <!-- ===== Drawers ===== -->
+
+    <!-- One row: icon (drawableStart) + label in a single view; the whole 48dp row is the tap target.
+         Long labels wrap rather than get cut off. -->
+    <style name="Drawer.Item" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/drawer_item_height</item>
+        <item name="android:paddingStart">@dimen/drawer_item_start</item>
+        <item name="android:paddingEnd">@dimen/drawer_item_end</item>
+        <item name="android:drawablePadding">@dimen/drawer_item_icon_gap</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/drawer_text_item</item>
+        <item name="android:letterSpacing">@dimen/drawer_letter_spacing</item>
+        <item name="android:textColor">@color/drawer_item_poppins</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <!-- The entertainer set-up steps Figma sets in Roboto, black at 80%. -->
+    <style name="Drawer.Item.Roboto">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/drawer_item_roboto</item>
+    </style>
+
+    <style name="Drawer.Item.Logout">
+        <item name="android:textSize">@dimen/drawer_text_logout</item>
+    </style>
+
+    <style name="Drawer.Label" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/drawer_label_start</item>
+        <item name="android:layout_marginTop">@dimen/drawer_label_gap</item>
+        <item name="android:layout_marginBottom">@dimen/drawer_label_bottom</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/drawer_text_label</item>
+        <item name="android:letterSpacing">@dimen/drawer_letter_spacing</item>
+        <item name="android:textColor">@color/drawer_label</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Drawer.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/drawer_divider_height</item>
+        <item name="android:layout_marginStart">@dimen/drawer_divider_margin</item>
+        <item name="android:layout_marginEnd">@dimen/drawer_divider_margin</item>
+        <item name="android:background">@color/drawer_divider</item>
+    </style>
+
+    <style name="Drawer.Name" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/drawer_text_name</item>
+        <item name="android:letterSpacing">@dimen/drawer_letter_spacing</item>
+        <item name="android:textColor">@color/drawer_name</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- Close (top end, 48dp tap area) and logo (centred) share the header. -->
+    <style name="Drawer.Close" parent="">
+        <item name="android:layout_width">@dimen/drawer_close_size</item>
+        <item name="android:layout_height">@dimen/drawer_close_size</item>
+        <item name="android:layout_gravity">top|end</item>
+        <item name="android:padding">@dimen/drawer_close_padding</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:contentDescription">@string/navigation_drawer_close</item>
+        <item name="android:src">@drawable/ic_drawer_close</item>
+    </style>
+
+    <style name="Drawer.Logo" parent="">
+        <item name="android:layout_width">@dimen/drawer_logo_width</item>
+        <item name="android:layout_height">@dimen/drawer_logo_height</item>
+        <item name="android:layout_gravity">top|center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/drawer_logo_top</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:src">@drawable/img_drawer_logo</item>
+    </style>
+
+    <style name="Drawer.Avatar" parent="">
+        <item name="android:layout_width">@dimen/drawer_avatar_size</item>
+        <item name="android:layout_height">@dimen/drawer_avatar_size</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/drawer_avatar_gap</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:src">@drawable/img_drawer_avatar</item>
+    </style>
+</resources>

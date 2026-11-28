@@ -1,67 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Design: Figma "DUV Live" → 02 · Improved → Welcome -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/duv_primary_dark"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingHorizontal="24dp"
-    android:paddingBottom="32dp"
-    tools:context="com.ebookfrenzy.duvproject.ui.auth.LoginSignUpOptionsFragment">
+    android:fillViewport="true"
+    >
 
-    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/oxblood_main"
+    android:padding="@dimen/margin_15dp"
+    tools:context="com.ebookfrenzy.duvproject.ui.auth.LoginSignUpOptionsFragment">
 
     <ImageView
         android:id="@+id/login_fragment_duv_logo_image_view"
-        android:layout_width="96dp"
-        android:layout_height="64dp"
-        android:contentDescription="DUV Live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/duv_red_logo"
-        android:tint="@color/duv_accent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <TextView
         android:id="@+id/login_sign_up_fragment_duv_text_view"
-        style="@style/Duv.Text.Display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="DUV LIVE"
-        android:textColor="@color/duv_on_primary" />
+        android:fontFamily="@font/rubik"
+        android:text="@string/duv"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintStart_toStartOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/login_fragment_duv_logo_image_view" />
 
     <TextView
         android:id="@+id/login_sign_up_fragment_live_text_view"
-        style="@style/Duv.Text.Body"
-        android:layout_width="280dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Hire entertainers or get hired — all in one place."
-        android:textColor="@color/duv_on_dark_muted" />
+        android:fontFamily="@font/rubik"
+        android:text="@string/live"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/login_sign_up_fragment_duv_text_view"
+        app:layout_constraintStart_toStartOf="@+id/login_sign_up_fragment_duv_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/login_sign_up_fragment_duv_text_view" />
 
-    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/login_sign_up_options_fragment_sign_up_button"
-        style="@style/Duv.Button.Light"
+        style="@style/white_button"
         android:layout_width="match_parent"
-        android:text="Create account" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_sign_up_options_fragment_login_button"
-        style="@style/Duv.Button.OutlinedLight"
-        android:layout_width="match_parent"
-        android:layout_marginTop="12dp"
-        android:text="Log in" />
-
-    <TextView
-        style="@style/Duv.Text.Body"
-        android:layout_width="280dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="By continuing you agree to our Terms and Privacy Policy"
-        android:textColor="@color/duv_on_dark_muted"
-        android:textSize="12sp" />
-</LinearLayout>
+        android:background="@drawable/custom_login_sign_up_fragment_sign_up_button"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/sign_up_real"
+        android:textColor="@color/oxblood_main"
+        app:layout_constraintEnd_toEndOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/login_fragment_duv_logo_image_view"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <Button
+        android:id="@+id/login_sign_up_options_fragment_login_button"
+        style="@style/sign_up_option_oxblood_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@+id/login_sign_up_options_fragment_sign_up_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_sign_up_options_fragment_sign_up_button"
+        app:layout_constraintTop_toBottomOf="@+id/login_sign_up_options_fragment_sign_up_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

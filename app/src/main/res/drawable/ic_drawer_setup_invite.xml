@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma "Entertainer's Account Setup > Menu" menu icon, exported as SVG. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/drawer_item_icon_size"
+    android:height="@dimen/drawer_item_icon_size"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group android:translateX="-26" android:translateY="-523.5">
+        <path
+            android:fillColor="@color/drawer_icon"
+            android:pathData="M41 534.625C42.245 534.625 43.2425 533.453 43.2425 532C43.2425 530.548 42.245 529.375 41 529.375C39.755 529.375 38.75 530.548 38.75 532C38.75 533.453 39.755 534.625 41 534.625ZM35 534.625C36.245 534.625 37.2425 533.453 37.2425 532C37.2425 530.548 36.245 529.375 35 529.375C33.755 529.375 32.75 530.548 32.75 532C32.75 533.453 33.755 534.625 35 534.625ZM35 536.375C33.2525 536.375 29.75 537.399 29.75 539.438V541.625H40.25V539.438C40.25 537.399 36.7475 536.375 35 536.375ZM41 536.375C40.7825 536.375 40.535 536.393 40.2725 536.419C41.1425 537.154 41.75 538.143 41.75 539.438V541.625H46.25V539.438C46.25 537.399 42.7475 536.375 41 536.375Z" />
+    </group>
+</vector>

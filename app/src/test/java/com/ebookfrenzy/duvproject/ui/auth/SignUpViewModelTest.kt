@@ -43,7 +43,7 @@ class SignUpViewModelTest {
 
         assertEquals(AccountCategory.USER, repo.lastRegisterCategory)
         assertEquals("08031234567", repo.lastRegisterPhone)
-        assertEquals(SignUpEvent.NavigateToHome(isEntertainer = false), vm.events.first())
+        assertEquals(SignUpEvent.ShowAccountCreated(isEntertainer = false), vm.events.first())
     }
 
     @Test

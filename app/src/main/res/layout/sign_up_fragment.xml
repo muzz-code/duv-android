@@ -61,8 +61,7 @@
                 android:id="@+id/sign_up_fragment_first_name_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/input_text_oxblood"
-                android:background="@color/input_text_oxblood"
+                android:background="@drawable/bg_underline_field"
                 android:fontFamily="@font/poppins"
                 android:inputType="text"
                 android:textColor="@color/white" />
@@ -86,10 +85,10 @@
             app:layout_constraintTop_toBottomOf="@+id/sign_up_fragment_first_name_text_Input">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/bg_underline_field"
                 android:id="@+id/sign_up_fragment_last_name_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/input_text_oxblood"
                 android:fontFamily="@font/poppins"
                 android:inputType="text"
                 android:textColor="@color/white" />
@@ -112,10 +111,10 @@
             app:layout_constraintTop_toBottomOf="@+id/sign_up_fragment_last_name_text_Input">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/bg_underline_field"
                 android:id="@+id/sign_up_fragment_email_address_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/input_text_oxblood"
                 android:fontFamily="@font/poppins"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/white" />
@@ -129,6 +128,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Choose category"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/arrow_down"
+            app:endIconTint="@color/white"
             android:fontFamily="@font/poppins"
             android:textColorHint="@color/white"
             app:errorEnabled="true"
@@ -138,10 +140,10 @@
             app:layout_constraintTop_toBottomOf="@+id/sign_up_fragment_email_address_text_Input">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/bg_underline_field"
                 android:id="@+id/sign_up_fragment_choose_category_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/input_text_oxblood"
                 android:fontFamily="@font/poppins"
                 android:inputType="text"
                 android:textColor="@color/white" />
@@ -164,10 +166,10 @@
             app:layout_constraintTop_toBottomOf="@+id/sign_up_fragment_choose_category_text_Input">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/bg_underline_field"
                 android:id="@+id/sign_up_fragment_phone_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/input_text_oxblood"
                 android:fontFamily="@font/poppins"
                 android:inputType="phone"
                 android:textColor="@color/white" />
@@ -192,10 +194,10 @@
             app:layout_constraintTop_toBottomOf="@+id/sign_up_fragment_phone_text_Input">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/bg_underline_field"
                 android:id="@+id/sign_up_fragment_password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/input_text_oxblood"
                 android:fontFamily="@font/poppins"
                 android:inputType="textPassword"
                 android:textColor="@color/white" />
@@ -219,10 +221,10 @@
             app:layout_constraintTop_toBottomOf="@+id/sign_up_fragment_password_text_Input">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/bg_underline_field"
                 android:id="@+id/sign_up_fragment_confirm_password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/input_text_oxblood"
                 android:fontFamily="@font/poppins"
                 android:inputType="textPassword"
                 android:layout_marginBottom="@dimen/margin_25dp"

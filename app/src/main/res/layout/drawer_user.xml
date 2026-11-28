@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Navigation drawer (Figma "User > Menu"): Figma's icons, logo, avatar, fonts and colours, with 48dp rows and
+     slightly larger text so items are easy to read and tap (see dimens_drawer.xml). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/drawer_width"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/drawer_background"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/drawer_bottom_space">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView style="@style/Drawer.Logo" />
+
+            <ImageView
+                android:id="@+id/drawer_close"
+                style="@style/Drawer.Close" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/drawer_avatar"
+            style="@style/Drawer.Avatar" />
+
+        <TextView
+            android:id="@+id/drawer_name"
+            style="@style/Drawer.Name"
+            android:layout_marginTop="@dimen/drawer_name_gap"
+            android:text="@string/drawer_name_placeholder" />
+
+        <View
+            style="@style/Drawer.Divider"
+            android:layout_marginTop="@dimen/drawer_divider_gap" />
+
+        <TextView
+            style="@style/Drawer.Label"
+            android:text="@string/drawer_navigation" />
+
+        <TextView
+            android:id="@+id/drawer_dashboard"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_dashboard"
+            android:text="@string/dashboard" />
+
+        <TextView
+            android:id="@+id/drawer_auctions"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_auctions"
+            android:text="@string/drawer_auctions" />
+
+        <TextView
+            android:id="@+id/drawer_requests"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_requests"
+            android:text="@string/drawer_requests" />
+
+        <TextView
+            android:id="@+id/drawer_my_events"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_my_events"
+            android:text="@string/drawer_my_events" />
+
+        <TextView
+            android:id="@+id/drawer_notifications"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_notifications"
+            android:text="@string/drawer_notifications" />
+
+        <TextView
+            android:id="@+id/drawer_hire"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_hire"
+            android:text="@string/drawer_hire_entertainers" />
+
+        <TextView
+            android:id="@+id/drawer_payments"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_payments"
+            android:text="@string/drawer_payments_history" />
+
+        <TextView
+            android:id="@+id/drawer_review"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_review"
+            android:text="@string/drawer_leave_review" />
+
+        <TextView
+            android:id="@+id/drawer_public_events"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_public_events"
+            android:text="@string/drawer_public_events" />
+
+        <View
+            style="@style/Drawer.Divider"
+            android:layout_marginTop="@dimen/drawer_section_gap" />
+
+        <TextView
+            style="@style/Drawer.Label"
+            android:text="@string/drawer_others" />
+
+        <TextView
+            android:id="@+id/drawer_switch"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_switch"
+            android:text="@string/drawer_switch_to_entertainer" />
+
+        <TextView
+            android:id="@+id/drawer_edit_profile"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_edit_profile"
+            android:text="@string/edit_profile" />
+
+        <TextView
+            android:id="@+id/drawer_invite"
+            style="@style/Drawer.Item"
+            android:drawableStart="@drawable/ic_drawer_invite"
+            android:text="@string/invite_friends" />
+
+        <TextView
+            android:id="@+id/drawer_logout"
+            style="@style/Drawer.Item.Logout"
+            android:drawableStart="@drawable/ic_drawer_logout"
+            android:text="@string/logout" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

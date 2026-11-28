@@ -3,7 +3,6 @@ package com.ebookfrenzy.duvproject.ui.user
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
-import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -17,7 +16,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.ebookfrenzy.duvproject.R
 import com.ebookfrenzy.duvproject.databinding.ActivityUserAccountBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 import com.ebookfrenzy.duvproject.ui.common.LoadingOverlay
 import com.ebookfrenzy.duvproject.ui.common.LogoutViewModel
 import com.ebookfrenzy.duvproject.ui.common.collectWhenStarted
@@ -50,72 +48,36 @@ class UserAccountActivity : AppCompatActivity() {
 
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navigationView: NavigationView = binding.navView
         val bottomNavView: BottomNavigationView = binding.navigationView
-        navigationView.bringToFront()
-        val navViewHeader = navigationView.getHeaderView(0)
-
-        val profileText: TextView =
-            navViewHeader.findViewById(R.id.entertainer_dashboard_nav_header_status_textview)
-        profileText.visibility = View.GONE
-
-
         val navController: NavController =
             findNavController(R.id.nav_host_fragment_activity_user_account)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-//        appBarConfiguration = AppBarConfiguration(
-//            setOf(
-//                R.id.nav_home, R.id.nav_event, R.id.nav_settings
-//            )
-//        )
-        appBarConfiguration = AppBarConfiguration(
-            navController.graph,
-            drawerLayout
-        )
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.hamburger_menu);
-
+        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.hamburger_menu)
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavView.setupWithNavController(navController)
-        navigationView.setupWithNavController(navController)
-
-        navigationView.setNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.dashboardFragment -> {
-                    findNavController(R.id.nav_host_fragment_activity_user_account).navigate(
-                        R.id.navigation_home)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-
-                R.id.auctionsFragment -> {
-                    findNavController(R.id.nav_host_fragment_activity_user_account).navigate(
-                        R.id.auctionsFragment2)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.requestsFragment -> {
-                    findNavController(R.id.nav_host_fragment_activity_user_account).navigate(R.id.requestsFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.myEventsFragment -> {
-                    findNavController(R.id.nav_host_fragment_activity_user_account).navigate(R.id.myEventsFragment)
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    return@setNavigationItemSelectedListener true
-                }
-                R.id.nav_logout -> {
-                    drawerLayout.closeDrawer(GravityCompat.START)
-                    logoutViewModel.onLogoutClicked()
-                    return@setNavigationItemSelectedListener true
-                }
-                else -> return@setNavigationItemSelectedListener true
-            }
-        }
+        setUpDrawer(drawerLayout, navController)
 
         collectWhenStarted(logoutViewModel.isLoading) { loader.setLoading(it) }
         collectWhenStarted(logoutViewModel.loggedOut) { openLogin() }
+    }
+
+    /** Drawer built from the Figma "User > Menu" frame (layout/drawer_user.xml). */
+    private fun setUpDrawer(drawerLayout: DrawerLayout, navController: NavController) = with(binding.drawer) {
+        fun closeAnd(action: () -> Unit) = View.OnClickListener {
+            drawerLayout.closeDrawer(GravityCompat.START)
+            action()
+        }
+        drawerClose.setOnClickListener { drawerLayout.closeDrawer(GravityCompat.START) }
+        drawerDashboard.setOnClickListener(closeAnd { navController.navigate(R.id.navigation_home) })
+        drawerAuctions.setOnClickListener(closeAnd { navController.navigate(R.id.auctionsFragment2) })
+        drawerRequests.setOnClickListener(closeAnd { navController.navigate(R.id.requestsFragment) })
+        drawerMyEvents.setOnClickListener(closeAnd { navController.navigate(R.id.myEventsFragment) })
+        drawerLogout.setOnClickListener(closeAnd { logoutViewModel.onLogoutClicked() })
+        // Not built yet: Notifications, Hire Entertainers, Payments History, Leave a review, Public Events,
+        // Switch account, Edit Profile, Invite Friends. They just close the drawer for now.
+        listOf(drawerNotifications, drawerHire, drawerPayments, drawerReview, drawerPublicEvents,
+            drawerSwitch, drawerEditProfile, drawerInvite).forEach { it.setOnClickListener(closeAnd {}) }
     }
 
     override fun onDestroy() {

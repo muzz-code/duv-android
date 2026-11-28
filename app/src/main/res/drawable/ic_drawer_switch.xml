@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma "User > Menu" menu icon, exported as SVG. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/drawer_item_icon_size"
+    android:height="@dimen/drawer_item_icon_size"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group android:translateX="-27" android:translateY="-503">
+        <path
+            android:fillColor="@color/drawer_icon"
+            android:pathData="M36.01 517H29V519H36.01V522L40 518L36.01 514V517ZM41.99 516V513H49V511H41.99V508L38 512L41.99 516Z" />
+    </group>
+</vector>

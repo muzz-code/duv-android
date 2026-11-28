@@ -1,307 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Design: Figma "DUV Live" → 02 · Improved → Entertainer · Setup checklist (BRS ENT-1…ENT-7). -->
+<!-- Entertainer set-up checklist (Figma "Entertainer's Account Setup > Dashboard"). -->
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/entertainer_dashboard_entertainer_profile_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/duv_background"
+    android:background="@color/setup_background"
     tools:context="com.ebookfrenzy.duvproject.ui.entertainer.DashboardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:paddingStart="@dimen/setup_screen_margin"
+        android:paddingTop="@dimen/setup_dashboard_top"
+        android:paddingEnd="@dimen/setup_screen_margin"
+        android:paddingBottom="@dimen/setup_bottom_space">
 
-        <com.google.android.material.card.MaterialCardView
-            style="@style/Duv.Card"
+        <TextView
+            android:id="@+id/setup_title"
+            style="@style/Setup.Heading"
+            android:layout_width="match_parent"
+            android:text="@string/setup_title"
+            app:lineHeight="@dimen/setup_line_title" />
+
+        <TextView
+            android:id="@+id/setup_intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/duv_primary_dark"
-            app:strokeWidth="0dp">
+            android:layout_marginTop="@dimen/setup_intro_gap"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.025"
+            android:text="@string/setup_intro"
+            android:textColor="@color/setup_intro"
+            android:textSize="@dimen/setup_text_body"
+            app:lineHeight="@dimen/setup_line_body" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+        <TextView
+            android:id="@+id/setup_step_profile"
+            style="@style/Setup.StepRow"
+            android:layout_marginTop="@dimen/setup_steps_gap"
+            android:text="@string/entertainer_profile" />
 
-                <TextView
-                    android:id="@+id/entertainer_profile_dashboard_h1_textview"
-                    style="@style/Duv.Text.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Activate your account"
-                    android:textColor="@color/duv_on_primary" />
+        <TextView
+            android:id="@+id/setup_step_bank"
+            style="@style/Setup.StepRow"
+            android:text="@string/bank_account_details" />
 
-                <TextView
-                    android:id="@+id/entertainer_profile_fragment_h2_textview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="0 of 5 steps done · approval within 24 hours after you finish"
-                    android:textColor="@color/duv_on_dark_muted"
-                    android:textSize="13sp" />
+        <TextView
+            android:id="@+id/setup_step_emergency"
+            style="@style/Setup.StepRow"
+            android:text="@string/emergency_contact" />
 
-                <ProgressBar
-                    android:id="@+id/entertainer_setup_progress"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:layout_marginTop="12dp"
-                    android:max="5"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/bg_duv_progress" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/setup_step_youtube"
+            style="@style/Setup.StepRow"
+            android:text="@string/youtube_channel" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/setup_step_entertainer_profile"
-            style="@style/Duv.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="16dp">
+        <TextView
+            android:id="@+id/setup_step_identification"
+            style="@style/Setup.StepRow"
+            android:text="@string/valid_identification" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:minHeight="64dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp">
-
-                <TextView
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_duv_step_circle_todo"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textColor="@color/duv_text_muted"
-                    android:textSize="13sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Entertainer profile" android:textColor="@color/duv_text" android:textSize="15sp" android:fontFamily="sans-serif-medium" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stage name, type, charges, location" android:textColor="@color/duv_text_muted" android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_duv_chevron_right"
-                    app:tint="@color/duv_text_muted" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/setup_step_valid_id"
-            style="@style/Duv.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:minHeight="64dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp">
-
-                <TextView
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_duv_step_circle_todo"
-                    android:gravity="center"
-                    android:text="2"
-                    android:textColor="@color/duv_text_muted"
-                    android:textSize="13sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Valid ID" android:textColor="@color/duv_text" android:textSize="15sp" android:fontFamily="sans-serif-medium" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NIN, passport or driver’s licence" android:textColor="@color/duv_text_muted" android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_duv_chevron_right"
-                    app:tint="@color/duv_text_muted" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/setup_step_bank_account"
-            style="@style/Duv.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:minHeight="64dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp">
-
-                <TextView
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_duv_step_circle_todo"
-                    android:gravity="center"
-                    android:text="3"
-                    android:textColor="@color/duv_text_muted"
-                    android:textSize="13sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bank account" android:textColor="@color/duv_text" android:textSize="15sp" android:fontFamily="sans-serif-medium" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Where we pay you" android:textColor="@color/duv_text_muted" android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_duv_chevron_right"
-                    app:tint="@color/duv_text_muted" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/setup_step_emergency_contact"
-            style="@style/Duv.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:minHeight="64dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp">
-
-                <TextView
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_duv_step_circle_todo"
-                    android:gravity="center"
-                    android:text="4"
-                    android:textColor="@color/duv_text_muted"
-                    android:textSize="13sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Emergency contact" android:textColor="@color/duv_text" android:textSize="15sp" android:fontFamily="sans-serif-medium" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Next of kin" android:textColor="@color/duv_text_muted" android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_duv_chevron_right"
-                    app:tint="@color/duv_text_muted" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/setup_step_youtube_channel"
-            style="@style/Duv.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:minHeight="64dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp">
-
-                <TextView
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:background="@drawable/bg_duv_step_circle_todo"
-                    android:gravity="center"
-                    android:text="5"
-                    android:textColor="@color/duv_text_muted"
-                    android:textSize="13sp"
-                    android:fontFamily="sans-serif-medium" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="YouTube channel" android:textColor="@color/duv_text" android:textSize="15sp" android:fontFamily="sans-serif-medium" />
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Show your past performances" android:textColor="@color/duv_text_muted" android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_duv_chevron_right"
-                    app:tint="@color/duv_text_muted" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/entertainer_dashboard_continue_btn"
-            style="@style/Duv.Button"
-            android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
-            android:text="@string/continue_setup" />
+        <Button
+            android:id="@+id/setup_continue"
+            style="@style/Setup.Button"
+            android:layout_marginTop="@dimen/setup_continue_gap"
+            android:elevation="0dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:letterSpacing="-0.02"
+            android:text="@string/setup_continue"
+            android:textSize="@dimen/setup_text_continue" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

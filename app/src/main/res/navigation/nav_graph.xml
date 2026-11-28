@@ -34,7 +34,23 @@
         android:id="@+id/signUpFragment"
         android:name="com.ebookfrenzy.duvproject.ui.auth.signup.SignUpFragment"
         android:label="sign_up_fragment"
-        tools:layout="@layout/sign_up_fragment" />
+        tools:layout="@layout/sign_up_fragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_signUpSuccessFragment"
+            app:destination="@id/signUpSuccessFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpSuccessFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.auth.signup.SignUpSuccessFragment"
+        android:label="sign_up_success_fragment"
+        tools:layout="@layout/sign_up_success_fragment">
+        <argument
+            android:name="isEntertainer"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
         android:name="com.ebookfrenzy.duvproject.ui.auth.forgotpassword.ForgotPasswordFragment"

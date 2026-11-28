@@ -2,6 +2,7 @@ package com.ebookfrenzy.duvproject.di
 
 import com.ebookfrenzy.duvproject.BuildConfig
 import com.ebookfrenzy.duvproject.data.remote.AuthApi
+import com.ebookfrenzy.duvproject.data.remote.EntertainerApi
 import com.ebookfrenzy.duvproject.data.remote.AuthInterceptor
 import com.ebookfrenzy.duvproject.data.remote.TokenAuthenticator
 import com.google.gson.Gson
@@ -67,6 +68,10 @@ object NetworkModule {
     @Provides
     @Singleton
     fun provideAuthApi(retrofit: Retrofit): AuthApi = retrofit.create(AuthApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideEntertainerApi(retrofit: Retrofit): EntertainerApi = retrofit.create(EntertainerApi::class.java)
 
     @Provides
     @Singleton

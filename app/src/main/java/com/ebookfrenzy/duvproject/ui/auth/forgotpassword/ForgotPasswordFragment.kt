@@ -69,7 +69,7 @@ class ForgotPasswordFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        requireActivity().setStatusBar(R.color.duv_background, darkIcons = true)
+        requireActivity().setStatusBar(R.color.white, darkIcons = true)
     }
 
     override fun onDestroyView() {

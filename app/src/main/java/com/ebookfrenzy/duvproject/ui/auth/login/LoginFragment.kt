@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -47,7 +46,6 @@ class LoginFragment : Fragment() {
             fullText = "Not Registered? create an account",
             styleStart = 15,
             clickableStart = 16,
-            linkColor = ContextCompat.getColor(requireContext(), R.color.duv_primary),
         ) { viewModel.onCreateAccountClicked() }
 
         collectWhenStarted(viewModel.uiState, ::render)
@@ -56,7 +54,7 @@ class LoginFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        requireActivity().setStatusBar(R.color.duv_background, darkIcons = true)
+        requireActivity().setStatusBar(R.color.oxblood_main, darkIcons = false)
     }
 
     private fun render(state: LoginUiState) = with(binding) {

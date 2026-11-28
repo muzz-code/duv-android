@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Spinner shown over the screen while a request to the server is running (see LoadingOverlay). -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bg_loading"
-    android:padding="24dp">
-
-    <com.google.android.material.progressindicator.CircularProgressIndicator
-        android:id="@+id/loading_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/please_wait"
-        android:indeterminate="true"
-        app:indicatorColor="@color/oxblood_main"
-        app:indicatorSize="48dp"
-        app:trackThickness="4dp" />
-</FrameLayout>
+<!-- Shown while a request to the server is running (see LoadingOverlay): just the animated DUV logo, over the
+     darkened screen. -->
+<com.ebookfrenzy.duvproject.ui.common.DuvLogoLoaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading_indicator"
+    android:layout_width="@dimen/loader_logo_width"
+    android:layout_height="@dimen/loader_logo_height" />

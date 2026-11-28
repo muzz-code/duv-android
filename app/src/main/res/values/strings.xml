@@ -79,4 +79,8 @@
     <string name="choose_category">Choose category</string>
     <string name="please_choose_a_category">Please choose a category</string>
     <string name="reset_link_sent">If that email has a DUV account, we\'ve sent a reset link. It expires in 30 minutes.</string>
+    <string name="account_created_title">Yay! Your account\nhas been created!</string>
+    <string name="account_created_message_user">Thanks for registering an account with us! You can now find events and hire entertainers on DUV Live.</string>
+    <string name="account_created_message_entertainer">Thanks for registering an account with us! Next, complete the 5 set-up steps so DUV can approve your profile.</string>
+    <string name="continue_text">CONTINUE</string>
 </resources>

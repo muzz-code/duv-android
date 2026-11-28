@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
@@ -16,9 +15,9 @@ import com.ebookfrenzy.duvproject.databinding.SignUpFragmentBinding
 import com.ebookfrenzy.duvproject.ui.common.LoadingOverlay
 import com.ebookfrenzy.duvproject.ui.common.collectWhenStarted
 import com.ebookfrenzy.duvproject.ui.common.loadingOverlay
-import com.ebookfrenzy.duvproject.ui.common.openHome
 import com.ebookfrenzy.duvproject.ui.common.setStyledLinkText
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -53,6 +52,7 @@ class SignUpFragment : Fragment() {
                 isCursorVisible = false
                 setOnClickListener { viewModel.onCategoryFieldClicked() }
             }
+            signUpFragmentChooseCategoryTextInput.setEndIconOnClickListener { viewModel.onCategoryFieldClicked() }
 
             signUpOptionsFragmentSignUpButton.setOnClickListener {
                 viewModel.onSignUpClicked(
@@ -99,12 +99,25 @@ class SignUpFragment : Fragment() {
 
     private fun handleEvent(event: SignUpEvent) {
         when (event) {
-            is SignUpEvent.ShowMessage ->
-                Toast.makeText(requireContext(), event.message, Toast.LENGTH_LONG).show()
+            is SignUpEvent.ShowMessage -> showErrorSnackbar(event.message)
             SignUpEvent.ChooseCategory -> showCategoryDialog()
-            is SignUpEvent.NavigateToHome -> requireActivity().openHome(event.isEntertainer)
+            is SignUpEvent.ShowAccountCreated -> findNavController().navigate(
+                R.id.action_signUpFragment_to_signUpSuccessFragment,
+                SignUpSuccessFragment.args(event.isEntertainer),
+            )
             SignUpEvent.NavigateToLogin -> findNavController().navigate(R.id.loginFragment)
         }
+    }
+
+    /** Failed sign-up (server or network): a snackbar with the reason and a way to close it. */
+    private fun showErrorSnackbar(message: String) {
+        Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
+            .setBackgroundTint(ContextCompat.getColor(requireContext(), R.color.white))
+            .setTextColor(ContextCompat.getColor(requireContext(), R.color.oxblood_main))
+            .setActionTextColor(ContextCompat.getColor(requireContext(), R.color.red))
+            .setTextMaxLines(4)
+            .setAction(android.R.string.ok) { }
+            .show()
     }
 
     private fun showCategoryDialog() {

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma "Rectangle 946": white input box, 1px #ADBACD border, square corners. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/setup_surface" />
+    <stroke android:width="@dimen/setup_field_border" android:color="@color/setup_field_border" />
+</shape>

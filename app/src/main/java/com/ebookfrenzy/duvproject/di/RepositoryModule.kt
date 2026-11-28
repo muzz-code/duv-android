@@ -3,6 +3,8 @@ package com.ebookfrenzy.duvproject.di
 import com.ebookfrenzy.duvproject.data.repository.AuthRepository
 import com.ebookfrenzy.duvproject.data.repository.LocalOnBoardingRepository
 import com.ebookfrenzy.duvproject.data.repository.NetworkAuthRepository
+import com.ebookfrenzy.duvproject.data.repository.EntertainerSetupRepository
+import com.ebookfrenzy.duvproject.data.repository.NetworkEntertainerSetupRepository
 import com.ebookfrenzy.duvproject.data.repository.OnBoardingRepository
 import dagger.Binds
 import dagger.Module
@@ -22,4 +24,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindAuthRepository(impl: NetworkAuthRepository): AuthRepository
+
+    @Binds
+    @Singleton
+    abstract fun bindEntertainerSetupRepository(impl: NetworkEntertainerSetupRepository): EntertainerSetupRepository
 }

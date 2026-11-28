@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Navigation drawers ("User > Menu" and "Entertainer's Account Setup > Menu" in Figma).
+     Figma draws the menu for a 360dp-wide phone with 24-29dp rows. Here every row is a 48dp touch target (Android's
+     minimum) and text and icons are about 15% larger than in Figma, so they read and tap comfortably on real phones. -->
+<resources>
+    <!-- 302 of 360 in Figma; values-w400dp widens it on larger phones. -->
+    <dimen name="drawer_width">304dp</dimen>
+
+    <!-- Header -->
+    <dimen name="drawer_close_size">48dp</dimen>
+    <dimen name="drawer_close_padding">12dp</dimen>
+    <dimen name="drawer_logo_top">24dp</dimen>
+    <dimen name="drawer_logo_width">68dp</dimen>
+    <dimen name="drawer_logo_height">56dp</dimen>
+    <dimen name="drawer_avatar_size">58dp</dimen>
+    <dimen name="drawer_avatar_gap">12dp</dimen>
+    <dimen name="drawer_name_gap">8dp</dimen>
+    <dimen name="drawer_role_gap">2dp</dimen>
+
+    <!-- Dividers and section labels -->
+    <dimen name="drawer_divider_height">1dp</dimen>
+    <dimen name="drawer_divider_margin">16dp</dimen>
+    <dimen name="drawer_divider_gap">14dp</dimen>
+    <dimen name="drawer_section_gap">8dp</dimen>
+    <dimen name="drawer_label_gap">12dp</dimen>
+    <dimen name="drawer_label_start">24dp</dimen>
+    <dimen name="drawer_label_bottom">4dp</dimen>
+
+    <!-- Rows: one 48dp touch target each; icon box from 20dp, label after it -->
+    <dimen name="drawer_item_height">48dp</dimen>
+    <dimen name="drawer_item_start">20dp</dimen>
+    <dimen name="drawer_item_end">16dp</dimen>
+    <dimen name="drawer_item_icon_size">28dp</dimen>
+    <dimen name="drawer_item_icon_gap">18dp</dimen>
+    <dimen name="drawer_bottom_space">24dp</dimen>
+
+    <!-- Text -->
+    <dimen name="drawer_text_item">16sp</dimen>
+    <dimen name="drawer_text_logout">15sp</dimen>
+    <dimen name="drawer_text_label">12sp</dimen>
+    <dimen name="drawer_text_name">15sp</dimen>
+    <item name="drawer_letter_spacing" format="float" type="dimen">0.01</item>
+</resources>

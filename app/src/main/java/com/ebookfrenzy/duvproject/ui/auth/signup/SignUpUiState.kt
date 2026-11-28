@@ -30,7 +30,8 @@ sealed interface SignUpEvent {
     data class ShowMessage(val message: String) : SignUpEvent
     /** Show the category list (User, DJ, MC, Live band). */
     data object ChooseCategory : SignUpEvent
-    data class NavigateToHome(val isEntertainer: Boolean) : SignUpEvent
+    /** Registration succeeded: show the "account created" screen. */
+    data class ShowAccountCreated(val isEntertainer: Boolean) : SignUpEvent
     /** The "Login" link was tapped. */
     data object NavigateToLogin : SignUpEvent
 }

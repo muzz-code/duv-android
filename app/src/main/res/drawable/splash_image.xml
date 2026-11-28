@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@color/duv_primary_dark"
+        android:drawable="@color/oxblood_main"
         />
     <item
         android:drawable="@drawable/splash_duv_logo"

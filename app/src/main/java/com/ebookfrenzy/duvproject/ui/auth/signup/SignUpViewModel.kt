@@ -90,7 +90,7 @@ class SignUpViewModel @Inject constructor(
             when (result) {
                 is ApiResult.Success -> {
                     _uiState.update { it.copy(isLoading = false) }
-                    _events.send(SignUpEvent.NavigateToHome(result.data.isEntertainer))
+                    _events.send(SignUpEvent.ShowAccountCreated(result.data.isEntertainer))
                 }
                 is ApiResult.Failure -> {
                     _uiState.update { it.copy(isLoading = false, serverFieldErrors = result.fieldErrors) }
