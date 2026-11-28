@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The animated DUV logo shown while a request is running (LoadingOverlay / DuvLogoLoaderView). -->
+<resources>
+    <color name="loader_bar">#EA3323</color>
+
+    <dimen name="loader_logo_width">96dp</dimen>
+    <dimen name="loader_logo_height">57dp</dimen>
+
+    <!-- How dark the screen behind the logo gets: 0 = not at all, 1 = black. -->
+    <item name="loader_dim_amount" format="float" type="dimen">0.7</item>
+
+    <!-- One full rise-and-fall of the bars. -->
+    <integer name="loader_cycle_ms">900</integer>
+</resources>

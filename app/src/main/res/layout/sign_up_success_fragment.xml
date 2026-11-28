@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Yay! Your account has been created!" screen from the Figma Authentication section. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/margin_25dp"
+    tools:context="com.ebookfrenzy.duvproject.ui.auth.signup.SignUpSuccessFragment">
+
+    <ImageView
+        android:id="@+id/sign_up_success_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/account_created"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_success_title"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_max="280dp" />
+
+    <TextView
+        android:id="@+id/sign_up_success_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/account_created_title"
+        android:textColor="@color/bold_gray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_success_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_success_image" />
+
+    <TextView
+        android:id="@+id/sign_up_success_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:textColor="@color/oxblood_main"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_success_continue_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_success_title"
+        tools:text="@string/account_created_message_user" />
+
+    <Button
+        android:id="@+id/sign_up_success_continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_login_sign_up_fragment_sign_up_button"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/continue_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_success_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Entertainer account set-up screens (Figma "Entertainer's Account Setup"). Gaps are the space between one element
+     and the next, measured in Figma. -->
+<resources>
+    <!-- Page -->
+    <dimen name="setup_screen_margin">24dp</dimen>
+    <dimen name="setup_bottom_space">32dp</dimen>
+
+    <!-- Header (back arrow + title) -->
+    <dimen name="setup_header_height">49dp</dimen>
+    <dimen name="setup_header_shadow">4dp</dimen>
+    <dimen name="setup_header_back_start">14dp</dimen>
+    <dimen name="setup_header_back_touch">48dp</dimen>
+    <dimen name="setup_header_title_start">116dp</dimen>
+
+    <!-- Input boxes -->
+    <dimen name="setup_field_height">37.5dp</dimen>
+    <dimen name="setup_field_padding">16dp</dimen>
+    <dimen name="setup_field_gap">21dp</dimen>
+    <dimen name="setup_field_border">1dp</dimen>
+    <dimen name="setup_chevron_end">15dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="setup_button_height">41dp</dimen>
+    <dimen name="setup_button_radius">10dp</dimen>
+    <dimen name="setup_button_border">0.5dp</dimen>
+    <dimen name="setup_button_elevation">4dp</dimen>
+    <dimen name="setup_button_gap">40dp</dimen>
+
+    <!-- Dashboard checklist -->
+    <dimen name="setup_dashboard_top">17dp</dimen>
+    <dimen name="setup_intro_gap">8dp</dimen>
+    <dimen name="setup_steps_gap">15dp</dimen>
+    <dimen name="setup_continue_gap">26dp</dimen>
+
+    <!-- Entertainer Profile photo -->
+    <dimen name="setup_photo_top">35dp</dimen>
+    <dimen name="setup_photo_size">130dp</dimen>
+    <dimen name="setup_photo_nudge">6dp</dimen>
+    <dimen name="setup_photo_gap">36dp</dimen>
+    <dimen name="setup_camera_badge">27dp</dimen>
+    <dimen name="setup_camera_badge_padding">6dp</dimen>
+    <dimen name="setup_camera_badge_end">8dp</dimen>
+    <dimen name="setup_camera_badge_bottom">1dp</dimen>
+
+    <!-- Emergency Contact sections -->
+    <dimen name="setup_section_top">27dp</dimen>
+    <dimen name="setup_heading_gap">24dp</dimen>
+    <dimen name="setup_section_gap">44dp</dimen>
+
+    <!-- Pop-up cards -->
+    <dimen name="setup_dialog_margin">24dp</dimen>
+    <dimen name="setup_dialog_radius">5dp</dimen>
+    <dimen name="setup_dialog_padding">18dp</dimen>
+    <dimen name="setup_dialog_title_inset">2dp</dimen>
+    <dimen name="setup_dialog_title_top">23dp</dimen>
+    <dimen name="setup_dialog_title_gap">19dp</dimen>
+    <dimen name="setup_dialog_button_gap">32dp</dimen>
+    <dimen name="setup_dialog_bottom">24dp</dimen>
+    <dimen name="setup_dialog_button_width">85dp</dimen>
+    <dimen name="setup_dialog_back_inset">2dp</dimen>
+    <dimen name="setup_dialog_back_padding_h">8dp</dimen>
+    <dimen name="setup_dialog_back_padding_v">10dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="setup_text_title">16sp</dimen>
+    <dimen name="setup_text_body">12sp</dimen>
+    <dimen name="setup_text_field">14sp</dimen>
+    <dimen name="setup_text_button">16sp</dimen>
+    <dimen name="setup_text_continue">15sp</dimen>
+    <dimen name="setup_text_small_button">13sp</dimen>
+    <!-- Bank lookup status line under the account name. -->
+    <dimen name="setup_text_status">12sp</dimen>
+    <dimen name="setup_status_gap">6dp</dimen>
+    <dimen name="setup_search_padding">16dp</dimen>
+    <dimen name="setup_line_title">24.5sp</dimen>
+    <dimen name="setup_line_body">19sp</dimen>
+    <dimen name="setup_line_heading">22sp</dimen>
+</resources>

@@ -1,168 +1,108 @@
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Set-up step 4 (Figma "Entertainer's Account Setup > Emergency Contact"): next of kin and a professional
+     contact. The header stays fixed while the form scrolls beneath it. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f4f3f1"
-    android:id="@+id/emergencyContactFragment"
-    tools:context="ui.entertainer.EmergencyContactFragment">
+    android:background="@color/setup_surface"
+    tools:context="com.ebookfrenzy.duvproject.ui.entertainer.EmergencyContactFragment">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:padding="@dimen/margin_20dp"
-      >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next Of Kin"
-        android:textSize="@dimen/text_size_16sp"
-        android:layout_marginBottom="@dimen/margin_20dp"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/oxblood_main"
-        />
-
-  <EditText
-      android:id="@+id/edit_profile_fragment_first_name_et"
-      android:layout_width="match_parent"
-      android:hint="@string/first_name"
-      android:background="@drawable/custom_edit_text_input"
-      android:layout_height="40dp"
-      android:layout_marginBottom="@dimen/margin_15dp"
-      android:paddingLeft="@dimen/margin_10dp"
-      android:textSize="@dimen/text_size_16sp"
-      android:inputType="text"
-
-      />
-    <EditText
-        android:id="@+id/edit_profile_fragment_last_name_et"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/setup_scroll"
         android:layout_width="match_parent"
-        android:hint="@string/last_name"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        />
-    <EditText
-        android:id="@+id/emergency_contact_fragment_email_et"
-        android:layout_width="match_parent"
-        android:hint="@string/email"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        tools:ignore="TextFields" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edit_profile_fragment_phone_et"
-        android:layout_width="match_parent"
-        android:hint="Phone"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/setup_screen_margin"
+            android:paddingTop="@dimen/setup_header_height"
+            android:paddingEnd="@dimen/setup_screen_margin"
+            android:paddingBottom="@dimen/setup_bottom_space">
 
-    <EditText
-        android:id="@+id/edit_profile_fragment_alternate_phone_number_et"
-        android:layout_width="match_parent"
-        android:hint="@string/relationship"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        />
+            <TextView
+                android:id="@+id/emergency_heading_kin"
+                style="@style/Setup.Heading"
+                android:layout_marginTop="@dimen/setup_section_top"
+                android:text="@string/setup_next_of_kin" />
 
-  <TextView
-      android:id="@+id/edit_profile_fragment_change_password_text_view"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/professional_contact"
-      android:textSize="@dimen/text_size_16sp"
-      android:layout_marginVertical="@dimen/margin_15dp"
-      android:fontFamily="@font/poppins"
-      android:textColor="@color/oxblood_main"
-      />
+            <EditText
+                android:id="@+id/kin_first_name"
+                style="@style/Setup.Field"
+                android:layout_marginTop="@dimen/setup_heading_gap"
+                android:hint="@string/setup_hint_first_name"
+                android:inputType="textPersonName|textCapWords" />
 
+            <EditText
+                android:id="@+id/kin_last_name"
+                style="@style/Setup.Field"
+                android:hint="@string/setup_hint_last_name"
+                android:inputType="textPersonName|textCapWords" />
 
-    <EditText
-        android:id="@+id/edit_profile_old_password_et"
-        android:layout_width="match_parent"
-        android:hint="@string/first_name"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
+            <EditText
+                android:id="@+id/kin_email"
+                style="@style/Setup.Field"
+                android:hint="@string/setup_hint_email"
+                android:inputType="textEmailAddress" />
 
-        />
-    <EditText
-        android:id="@+id/edit_profile_new_passord_et"
-        android:layout_width="match_parent"
-        android:hint="@string/last_name"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        />
-    <EditText
-        android:id="@+id/edit_profile_confirm_password__et"
-        android:layout_width="match_parent"
-        android:hint="@string/email"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        tools:ignore="TextFields" />
+            <EditText
+                android:id="@+id/kin_phone"
+                style="@style/Setup.Field"
+                android:hint="@string/setup_hint_phone"
+                android:inputType="phone" />
 
-    <EditText
-        android:id="@+id/emergency_contact_fragment_pro_phone_et"
-        android:layout_width="match_parent"
-        android:hint="Phone"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        />
+            <EditText
+                android:id="@+id/kin_relationship"
+                style="@style/Setup.Field.Dropdown"
+                android:hint="@string/setup_hint_relationship" />
 
-    <EditText
-        android:id="@+id/emergency_contact_fragment_pro_relationship_et"
-        android:layout_width="match_parent"
-        android:hint="@string/relationship"
-        android:background="@drawable/custom_edit_text_input"
-        android:layout_height="40dp"
-        android:layout_marginBottom="@dimen/margin_15dp"
-        android:paddingLeft="@dimen/margin_10dp"
-        android:textSize="@dimen/text_size_16sp"
-        android:inputType="text"
-        />
+            <TextView
+                android:id="@+id/emergency_heading_professional"
+                style="@style/Setup.Heading"
+                android:layout_marginTop="@dimen/setup_section_gap"
+                android:text="@string/setup_professional_contact" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update Contact"
-        style="@style/onBoarding_oxblood_button"
-        android:paddingVertical="@dimen/margin_10dp"
-        android:fontFamily="@font/poppins"
-        android:layout_marginVertical="@dimen/margin_50dp"
-        />
+            <EditText
+                android:id="@+id/pro_first_name"
+                style="@style/Setup.Field"
+                android:layout_marginTop="@dimen/setup_heading_gap"
+                android:hint="@string/setup_hint_first_name"
+                android:inputType="textPersonName|textCapWords" />
 
-  </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+            <EditText
+                android:id="@+id/pro_last_name"
+                style="@style/Setup.Field"
+                android:hint="@string/setup_hint_last_name"
+                android:inputType="textPersonName|textCapWords" />
+
+            <EditText
+                android:id="@+id/pro_email"
+                style="@style/Setup.Field"
+                android:hint="@string/setup_hint_email"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/pro_phone"
+                style="@style/Setup.Field"
+                android:hint="@string/setup_hint_phone"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/pro_relationship"
+                style="@style/Setup.Field.Dropdown"
+                android:hint="@string/setup_hint_relationship" />
+
+            <Button
+                android:id="@+id/emergency_update"
+                style="@style/Setup.Button"
+                android:layout_marginTop="@dimen/setup_button_gap"
+                android:text="@string/setup_update_contact" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/setup_header"
+        layout="@layout/setup_header" />
+</FrameLayout>

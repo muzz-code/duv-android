@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The same chevron turned -90 degrees: 13.22 x 7.28, #473B38 at 54%. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="13.22dp" android:height="7.28dp"
+    android:viewportWidth="12" android:viewportHeight="7.41" android:alpha="0.54">
+    <path android:fillColor="@color/setup_chevron" android:pathData="M0,1.41L1.41,0 6,4.58 10.59,0 12,1.41l-6,6z" />
+</vector>

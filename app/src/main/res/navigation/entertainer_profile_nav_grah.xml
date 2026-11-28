@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="ui.entertainer.DashboardFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.entertainer.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
         android:id="@+id/emergencyContactFragment"
-        android:name="ui.entertainer.EmergencyContactFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.entertainer.EmergencyContactFragment"
         android:label="emergency_contact_fragment"
         tools:layout="@layout/emergency_contact_fragment" />
     <fragment
         android:id="@+id/entertainerProfileFragment"
-        android:name="ui.entertainer.EntertainerProfileFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.entertainer.EntertainerProfileFragment"
         android:label="entertainer_profile_fragment"
         tools:layout="@layout/entertainer_profile_fragment" />
     <fragment
         android:id="@+id/editProfileFragment"
-        android:name="ui.entertainer.EditProfileFragment"
+        android:name="com.ebookfrenzy.duvproject.ui.entertainer.EditProfileFragment"
         android:label="EditProfileFragment"
         tools:layout="@layout/fragment_edit_profile"/>
 </navigation>

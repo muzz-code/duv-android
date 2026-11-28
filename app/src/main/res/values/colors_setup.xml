@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Colours read from the Figma set-up screens and drawers. -->
+<resources>
+    <!-- Set-up screens -->
+    <color name="setup_background">#FAFAFA</color>
+    <color name="setup_surface">#FFFFFF</color>
+    <color name="setup_heading">#584343</color>
+    <color name="setup_intro">#E6584343</color>
+    <color name="setup_title">#3D0606</color>
+    <color name="setup_field_border">#ADBACD</color>
+    <color name="setup_field_text">#CC000000</color>
+    <color name="setup_field_hint">#80000000</color>
+    <color name="setup_chevron">#473B38</color>
+    <color name="setup_back_arrow">#000000</color>
+    <color name="setup_button">#570808</color>
+    <color name="setup_button_ripple">#33FFFFFF</color>
+    <color name="setup_dialog_back">#353C4E</color>
+    <color name="setup_camera_badge">#E5E5E5</color>
+    <color name="setup_photo_placeholder">#C4C4C4</color>
+    <color name="setup_header_shadow">#1A000000</color>
+    <color name="setup_status_ok">#1E7B34</color>
+    <color name="setup_status_error">#B3261E</color>
+
+    <!-- Drawers (exact Figma fills) -->
+    <color name="drawer_background">#FFFFFF</color>
+    <color name="drawer_icon">#473B38</color>
+    <color name="drawer_item_poppins">#473B38</color>
+    <color name="drawer_item_roboto">#CC000000</color>
+    <color name="drawer_label">#473B38</color>
+    <color name="drawer_name">#3E0404</color>
+    <color name="drawer_divider">#D8D8D8</color>
+    <color name="drawer_close">#3E0404</color>
+    <color name="drawer_avatar">#570808</color>
+    <color name="drawer_logo">#FF0000</color>
+</resources>

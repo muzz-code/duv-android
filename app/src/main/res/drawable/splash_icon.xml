@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DUV logo inset inside the Android 12+ splash icon (240dp box, only the inner circle is visible). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="96dp"
+        android:drawable="@drawable/splash_duv_logo"
+        android:left="76dp"
+        android:right="76dp"
+        android:top="96dp" />
+</layer-list>

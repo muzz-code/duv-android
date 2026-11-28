@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.user.AuctionsFragment">
+    tools:context="com.ebookfrenzy.duvproject.ui.user.auctions.AuctionsFragment">
 
     <ImageView
         android:id="@+id/action_image_view"

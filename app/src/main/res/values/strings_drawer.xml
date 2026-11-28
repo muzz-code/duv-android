@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Navigation drawers. Items shared with other screens (Dashboard, Edit Profile, Logout, ...) live in strings.xml. -->
+<resources>
+    <string name="drawer_navigation">NAVIGATION</string>
+    <string name="drawer_others">OTHERS</string>
+    <string name="drawer_name_placeholder">John Doe</string>
+    <string name="drawer_role_entertainer">Entertainer</string>
+    <string name="drawer_auctions">Auctions</string>
+    <string name="drawer_requests">Requests</string>
+    <string name="drawer_my_events">My Events</string>
+    <string name="drawer_notifications">Notifications</string>
+    <string name="drawer_hire_entertainers">Hire Entertainers</string>
+    <string name="drawer_payments_history">Payments History</string>
+    <string name="drawer_leave_review">Leave a review</string>
+    <string name="drawer_public_events">Public Events</string>
+    <string name="drawer_switch_to_entertainer">Switch to Entertainer Account</string>
+</resources>

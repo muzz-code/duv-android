@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shown while a request to the server is running (see LoadingOverlay): just the animated DUV logo, over the
+     darkened screen. -->
+<com.ebookfrenzy.duvproject.ui.common.DuvLogoLoaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading_indicator"
+    android:layout_width="@dimen/loader_logo_width"
+    android:layout_height="@dimen/loader_logo_height" />

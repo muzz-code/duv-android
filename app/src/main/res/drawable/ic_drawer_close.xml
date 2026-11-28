@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma menu close icon, exported as SVG. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/drawer_item_icon_size"
+    android:height="@dimen/drawer_item_icon_size"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group android:translateX="-267" android:translateY="-8">
+        <path
+            android:fillColor="@color/drawer_close"
+            android:fillAlpha="0.54"
+            android:fillType="evenOdd"
+            android:pathData="M286 14.4L284.6 13L279 18.6L273.4 13L272 14.4L277.6 20L272 25.6L273.4 27L279 21.4L284.6 27L286 25.6L280.4 20L286 14.4Z" />
+    </group>
+</vector>

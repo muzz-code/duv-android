@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma "Rectangle 24": #570808 fill, 10dp radius, 0.5px white border. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/setup_button_ripple">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/setup_button" />
+            <corners android:radius="@dimen/setup_button_radius" />
+            <stroke android:width="@dimen/setup_button_border" android:color="@color/setup_surface" />
+        </shape>
+    </item>
+</ripple>

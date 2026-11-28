@@ -12,7 +12,7 @@
     android:fillViewport="true"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:context="ui.LoginFragment">
+    tools:context="com.ebookfrenzy.duvproject.ui.auth.login.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/input_text_oxblood"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 android:textCursorDrawable="@color/white"
                />
@@ -110,7 +110,7 @@
                 android:layout_height="match_parent"
                 android:backgroundTint="@color/input_text_oxblood"
                 android:fontFamily="@font/poppins"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:textColor="@color/white" />
 
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- White header with Figma's drop shadow (y 4, blur 4, #000000 10%) drawn as a soft band underneath. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="@dimen/setup_header_shadow">
+        <shape android:shape="rectangle">
+            <gradient android:angle="270" android:startColor="@color/setup_header_shadow" android:endColor="#00000000" />
+        </shape>
+    </item>
+    <item android:bottom="@dimen/setup_header_shadow">
+        <shape android:shape="rectangle"><solid android:color="@color/setup_surface" /></shape>
+    </item>
+</layer-list>

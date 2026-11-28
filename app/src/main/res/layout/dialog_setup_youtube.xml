@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Figma "Youtube Channel" card. The dialog window sets the width (screen minus @dimen/setup_dialog_margin each side). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_setup_dialog"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/setup_dialog_padding"
+    android:paddingTop="@dimen/setup_dialog_title_top"
+    android:paddingEnd="@dimen/setup_dialog_padding"
+    android:paddingBottom="@dimen/setup_dialog_bottom">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/Setup.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/setup_dialog_title_inset"
+        android:text="@string/youtube_channel" />
+
+    <EditText
+        android:id="@+id/youtube_url"
+        style="@style/Setup.Field"
+        android:layout_marginTop="@dimen/setup_dialog_title_gap"
+        android:hint="@string/setup_hint_youtube_url"
+        android:inputType="textUri" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/setup_dialog_button_gap">
+
+        <TextView
+            android:id="@+id/dialog_back"
+            style="@style/Setup.DialogBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="@dimen/setup_dialog_back_inset" />
+
+        <Button
+            android:id="@+id/dialog_update"
+            style="@style/Setup.Button"
+            android:layout_width="@dimen/setup_dialog_button_width"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/setup_dialog_back_inset"
+            android:text="@string/setup_update"
+            android:textSize="@dimen/setup_text_small_button" />
+    </FrameLayout>
+</LinearLayout>
