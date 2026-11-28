@@ -27,7 +27,7 @@ class SetupViewModelsTest {
     /** Records what would be sent and answers with a profile whose progress the test controls. */
     private class FakeSetupRepository(var steps: Map<String, Boolean> = emptyMap()) : EntertainerSetupRepository {
         var profile: ProfileDetailsRequest? = null
-        var contacts: Pair<ContactDto, ContactDto?>? = null
+        var contacts: Pair<ContactDto, ContactDto>? = null
         var identification: IdentificationDto? = null
         /** (bank code, account number) of the last save. */
         var bank: Pair<String, String>? = null
@@ -56,7 +56,7 @@ class SetupViewModelsTest {
             if (accountNumber.startsWith("000")) ApiResult.Failure("We couldn't find this account.")
             else ApiResult.Success(ResolvedAccountDto(bankCode, "Bank $bankCode", accountNumber, "ADA OBI"))
         }
-        override suspend fun saveEmergencyContacts(nextOfKin: ContactDto, professional: ContactDto?) =
+        override suspend fun saveEmergencyContacts(nextOfKin: ContactDto, professional: ContactDto) =
             ok().also { contacts = nextOfKin to professional }
         override suspend fun saveYoutube(url: String) = ok().also { youtube = url }
     }
@@ -100,18 +100,31 @@ class SetupViewModelsTest {
     // ---- Emergency Contact ----
 
     private val kin = ContactForm("Ada", "Obi", "", "0805 123 4567", "Sibling")
+    private val pro = ContactForm("Tunde", "Bello", "", "0806 123 4567", "Manager")
 
     @Test
-    fun `next of kin alone is saved without a professional contact`() = runTest {
+    fun `both contacts are saved, emails optional`() = runTest {
+        val repo = FakeSetupRepository()
+        val vm = EmergencyContactViewModel(repo)
+
+        vm.saveContacts(kin, pro)
+
+        val (sentKin, sentPro) = repo.contacts!!
+        assertEquals("08051234567", sentKin.phone)
+        assertNull(sentKin.email)
+        assertEquals("Bello", sentPro.lastName)
+        assertEquals("08061234567", sentPro.phone)
+    }
+
+    @Test
+    fun `next of kin alone is refused`() = runTest {
         val repo = FakeSetupRepository()
         val vm = EmergencyContactViewModel(repo)
 
         vm.saveContacts(kin, ContactForm("", "", "", "", ""))
 
-        val (sentKin, sentPro) = repo.contacts!!
-        assertEquals("08051234567", sentKin.phone)
-        assertNull(sentKin.email)
-        assertNull(sentPro)
+        assertNull(repo.contacts)
+        assertEquals(SetupEvent.Invalid(R.string.setup_error_professional_incomplete), vm.events.first())
     }
 
     @Test
@@ -130,7 +143,7 @@ class SetupViewModelsTest {
         val repo = FakeSetupRepository()
         val vm = EmergencyContactViewModel(repo)
 
-        vm.saveContacts(kin.copy(phone = "12345"), ContactForm("", "", "", "", ""))
+        vm.saveContacts(kin.copy(phone = "12345"), pro)
 
         assertNull(repo.contacts)
         assertEquals(SetupEvent.Invalid(R.string.invalid_phone_number), vm.events.first())

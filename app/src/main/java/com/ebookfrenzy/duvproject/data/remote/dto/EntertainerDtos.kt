@@ -89,4 +89,4 @@ data class ContactDto(
     val relationship: String,
 )
 
-data class EmergencyContactRequest(val nextOfKin: ContactDto, val professionalContact: ContactDto?)
+data class EmergencyContactRequest(val nextOfKin: ContactDto, val professionalContact: ContactDto)

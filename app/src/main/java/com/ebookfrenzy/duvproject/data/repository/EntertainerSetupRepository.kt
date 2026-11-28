@@ -29,7 +29,7 @@ interface EntertainerSetupRepository {
     suspend fun saveBankAccount(bankCode: String, accountNumber: String): ApiResult<EntertainerSetupDto>
     suspend fun banks(): ApiResult<List<BankDto>>
     suspend fun resolveAccount(bankCode: String, accountNumber: String): ApiResult<ResolvedAccountDto>
-    suspend fun saveEmergencyContacts(nextOfKin: ContactDto, professional: ContactDto?): ApiResult<EntertainerSetupDto>
+    suspend fun saveEmergencyContacts(nextOfKin: ContactDto, professional: ContactDto): ApiResult<EntertainerSetupDto>
     suspend fun saveYoutube(url: String): ApiResult<EntertainerSetupDto>
 }
 
@@ -60,7 +60,7 @@ class NetworkEntertainerSetupRepository @Inject constructor(
     override suspend fun resolveAccount(bankCode: String, accountNumber: String) =
         apiCall(gson) { api.resolveAccount(ResolveAccountRequest(bankCode, accountNumber)) }
 
-    override suspend fun saveEmergencyContacts(nextOfKin: ContactDto, professional: ContactDto?) =
+    override suspend fun saveEmergencyContacts(nextOfKin: ContactDto, professional: ContactDto) =
         apiCall(gson) { api.updateEmergencyContact(EmergencyContactRequest(nextOfKin, professional)) }
 
     override suspend fun saveYoutube(url: String) = apiCall(gson) { api.updateYoutube(YoutubeRequest(url)) }

@@ -33,6 +33,30 @@
     <dimen name="setup_steps_gap">15dp</dimen>
     <dimen name="setup_continue_gap">26dp</dimen>
 
+    <!-- Set-up progress card and step status (Figma "Account set-up progress") -->
+    <dimen name="setup_card_gap">16dp</dimen>
+    <dimen name="setup_card_radius">10dp</dimen>
+    <dimen name="setup_card_padding">15dp</dimen>
+    <dimen name="setup_card_padding_top">12dp</dimen>
+    <dimen name="setup_card_padding_bottom">14dp</dimen>
+    <dimen name="setup_card_line_gap">6dp</dimen>
+    <dimen name="setup_card_helper_gap">12dp</dimen>
+    <dimen name="setup_chip_height">22dp</dimen>
+    <dimen name="setup_chip_padding">11dp</dimen>
+    <dimen name="setup_bar_height">6dp</dimen>
+    <dimen name="setup_bar_gap">6dp</dimen>
+    <dimen name="setup_bar_top">8dp</dimen>
+    <dimen name="setup_step_icon">18dp</dimen>
+    <dimen name="setup_step_icon_start">16dp</dimen>
+    <dimen name="setup_step_text_start">12dp</dimen>
+    <dimen name="setup_step_status_end">10dp</dimen>
+    <dimen name="setup_step_next_border">1.5dp</dimen>
+    <dimen name="setup_step_number_border">1.2dp</dimen>
+    <dimen name="setup_text_card_label">13sp</dimen>
+    <dimen name="setup_text_card_count">18sp</dimen>
+    <dimen name="setup_text_chip">11sp</dimen>
+    <dimen name="setup_text_step_number">10sp</dimen>
+
     <!-- Entertainer Profile photo -->
     <dimen name="setup_photo_top">35dp</dimen>
     <dimen name="setup_photo_size">130dp</dimen>

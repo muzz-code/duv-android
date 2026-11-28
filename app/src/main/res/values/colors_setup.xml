@@ -20,6 +20,15 @@
     <color name="setup_header_shadow">#1A000000</color>
     <color name="setup_status_ok">#1E7B34</color>
     <color name="setup_status_error">#B3261E</color>
+    <!-- Set-up progress card (Figma "Account set-up progress"). -->
+    <color name="setup_progress_track">#EEE3E3</color>
+    <color name="setup_progress_muted">#6F5B5B</color>
+    <color name="setup_chip_progress_bg">#FFF3E0</color>
+    <color name="setup_chip_progress_text">#8A4B00</color>
+    <color name="setup_chip_review_bg">#E8EEF9</color>
+    <color name="setup_chip_review_text">#1F4E9C</color>
+    <color name="setup_chip_approved_bg">#E6F4EA</color>
+    <color name="setup_chip_changes_bg">#FCE8E6</color>
 
     <!-- Drawers (exact Figma fills) -->
     <color name="drawer_background">#FFFFFF</color>

@@ -72,8 +72,12 @@ class EmergencyContactFragment : Fragment() {
             kinRelationship.pickOneOf(SetupOptions.relationships)
             proRelationship.pickOneOf(SetupOptions.relationships)
             emergencyUpdate.setOnClickListener {
-                // Next of kin is required; the professional contact is optional (checked by the view model).
-                if (requireFilled(kinFirstName, kinLastName, kinPhone, kinRelationship)) {
+                // Both contacts are required; only the email boxes may stay empty.
+                val filled = requireFilled(
+                    kinFirstName, kinLastName, kinPhone, kinRelationship,
+                    proFirstName, proLastName, proPhone, proRelationship,
+                )
+                if (filled) {
                     viewModel.saveContacts(kin.read(), pro.read())
                 }
             }
